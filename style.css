@@ -1,0 +1,354 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+/* css reset */
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Hind", sans-serif;
+  background: #073b4c;
+}
+
+.birthday-card {
+  position: relative;
+  width: 25rem;
+  height: 35rem;
+  cursor: pointer;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: perspective(250rem);
+  transform: perspective(250rem);
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+}
+.birthday-card:hover {
+  -webkit-transform: perspective(250rem) rotate(5deg);
+  transform: perspective(250rem) rotate(5deg);
+  -webkit-box-shadow: inset 10rem 2rem 10rem rgba(0, 0, 0, 0.2),
+    0 1rem 10rem rgba(0, 0, 0, 0.4);
+  box-shadow: inset 10rem 2rem 10rem rgba(0, 0, 0, 0.2),
+    0 1rem 10rem rgba(0, 0, 0, 0.4);
+}
+.birthday-card:hover .card-front {
+  -webkit-transform: rotateY(-160deg);
+  transform: rotateY(-160deg);
+}
+.birthday-card:hover .happy {
+  visibility: hidden;
+}
+.birthday-card .card-front {
+  position: relative;
+  background-color: #fff;
+  width: 25rem;
+  height: 35rem;
+  overflow: hidden;
+  -webkit-transform-origin: left;
+  -ms-transform-origin: left;
+  transform-origin: left;
+  -webkit-box-shadow: inset 10rem 2rem 10rem rgba(0, 0, 0, 0.2),
+    3rem 0 5rem rgba(0, 0, 0, 0.4);
+  box-shadow: inset 10rem 2rem 10rem rgba(0, 0, 0, 0.2),
+    3rem 0 5rem rgba(0, 0, 0, 0.4);
+  -webkit-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
+}
+.birthday-card .card-front .happy {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 3rem 0;
+  color: transparent;
+  font-family: "Amatic SC", cursive;
+  font-variant: small-caps;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    from(red),
+    to(blue)
+  );
+  background: -o-linear-gradient(left top, red, blue);
+  background: linear-gradient(to right bottom, red, blue);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 2rem;
+  font-style: italic;
+  letter-spacing: 0.1rem;
+  -webkit-transition: 0.1s;
+  -o-transition: 0.1s;
+  transition: 0.1s;
+}
+.birthday-card .card-front .balloon {
+  position: absolute;
+}
+.birthday-card .card-front .balloon__one,
+.birthday-card .card-front .balloon__two,
+.birthday-card .card-front .balloon__three,
+.birthday-card .card-front .balloon__four {
+  position: absolute;
+  width: 8.5rem;
+  display: -ms-inline-grid;
+  display: inline-grid;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  font-size: 3rem;
+  color: #333;
+  font-weight: 600;
+  font-family: "Passions Conflict", cursive;
+  text-align: center;
+  height: 9.5rem;
+  border-radius: 50%;
+}
+.birthday-card .card-front .balloon__one::before,
+.birthday-card .card-front .balloon__two::before,
+.birthday-card .card-front .balloon__three::before,
+.birthday-card .card-front .balloon__four::before {
+  content: "";
+  position: absolute;
+  width: 0.1rem;
+  height: 15.5rem;
+  background: black;
+  top: 9.5rem;
+  left: 4.3rem;
+}
+.birthday-card .card-front .balloon__one::after,
+.birthday-card .card-front .balloon__two::after,
+.birthday-card .card-front .balloon__three::after,
+.birthday-card .card-front .balloon__four::after {
+  content: "";
+  position: absolute;
+  border-right: 0.7rem solid transparent;
+  border-left: 0.7rem solid transparent;
+  top: 9.4rem;
+  left: 3.7rem;
+}
+.birthday-card .card-front .balloon__one {
+  background: rgba(239, 71, 111, 0.7);
+  left: -1rem;
+  top: 5rem;
+}
+.birthday-card .card-front .balloon__one::after {
+  border-bottom: 1rem solid rgb(239, 71, 111);
+}
+.birthday-card .card-front .balloon__two {
+  background: rgba(6, 214, 160, 0.7);
+  left: 5rem;
+  top: 2rem;
+}
+.birthday-card .card-front .balloon__two::after {
+  border-bottom: 1rem solid rgb(6, 214, 160);
+}
+.birthday-card .card-front .balloon__three {
+  background: rgba(255, 209, 102, 0.7);
+  left: 11rem;
+  top: 5rem;
+}
+.birthday-card .card-front .balloon__three::after {
+  border-bottom: 1rem solid rgb(255, 209, 102);
+}
+.birthday-card .card-front .balloon__four {
+  background: rgba(17, 138, 178, 0.7);
+  left: 17rem;
+  top: 5rem;
+}
+.birthday-card .card-front .balloon__four::after {
+  border-bottom: 1rem solid rgb(17, 138, 178);
+}
+.birthday-card .card-inside {
+  position: absolute;
+  background: #fff;
+  top: 0;
+  left: 0;
+  width: 25rem;
+  height: 35rem;
+  -webkit-box-shadow: inset 10rem 2rem 10rem rgba(0, 0, 0, 0.2);
+  box-shadow: inset 10rem 2rem 10rem rgba(0, 0, 0, 0.2);
+  z-index: -1;
+}
+.birthday-card .card-inside p {
+  font-family: "Amatic SC", cursive;
+  margin: 4rem;
+  color: #333;
+  font-weight: 600;
+  font-size: 1.3rem;
+  letter-spacing: 0.1rem;
+}
+.birthday-card .card-inside .name {
+  position: absolute;
+  left: 15rem;
+  top: 20rem;
+  color: #333;
+}
+.birthday-card .card-inside .back {
+  font-family: "Passions Conflict", cursive;
+  color: transparent;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    from(red),
+    to(blue)
+  );
+  background: -o-linear-gradient(left top, red, blue);
+  background: linear-gradient(to right bottom, red, blue);
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-align: center;
+  margin: 3rem;
+  outline: dotted #333;
+  font-size: 3rem;
+  letter-spacing: 0.3rem;
+}
+
+.animation {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+}
+.animation__one,
+.animation__two,
+.animation__three,
+.animation__four,
+.animation__five {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  transform: rotate(45deg);
+  top: -11rem;
+}
+.animation__one::before,
+.animation__one::after,
+.animation__two::before,
+.animation__two::after,
+.animation__three::before,
+.animation__three::after,
+.animation__four::before,
+.animation__four::after,
+.animation__five::before,
+.animation__five::after {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+.animation__one::before,
+.animation__two::before,
+.animation__three::before,
+.animation__four::before,
+.animation__five::before {
+  content: "";
+  top: 1rem;
+  left: 0;
+}
+.animation__one::after,
+.animation__two::after,
+.animation__three::after,
+.animation__four::after,
+.animation__five::after {
+  content: "";
+  top: 0;
+  left: 1rem;
+}
+
+.animation__one {
+  background: black;
+  left: 5rem;
+  -webkit-animation: animate-1 2.5s linear infinite;
+  animation: animate-1 2.5s linear infinite;
+}
+.animation__one::after,.animation__one::before{
+  background: black;
+}
+.animation__two {
+  background: #06d6a0;
+  left: 10rem;
+  -webkit-animation: animate-1 2.3s linear 0.2s infinite;
+  animation: animate-1 2.3s linear 0.2s infinite;
+}
+.animation__two::after,.animation__two::before{
+  background: #06d6a0;
+}
+.animation__three {
+  background: #118ab2;
+  left: 15rem;
+  -webkit-animation: animate-1 2.4s linear 0.4s infinite;
+  animation: animate-1 2.4s linear 0.4s infinite;
+}
+.animation__three::after,.animation__three::before{
+  background: #118ab2;
+}
+.animation__four {
+  background: #ffbe0b;
+  left: 20rem;
+  -webkit-animation: animate-1 2.7s linear 0.1s infinite;
+  animation: animate-1 2.7s linear 0.1s infinite;
+}
+.animation__four::before,.animation__four::after{
+  background: #ffbe0b;
+}
+.animation__five {
+  background: #6666ff;
+  left: 23rem;
+  -webkit-animation: animate-1 3s linear 0.5ms infinite;
+  animation: animate-1 3s linear 0.5ms infinite;
+}
+.animation__five::before,.animation__five::after{
+  background: #6666ff;
+}
+
+@-webkit-keyframes animate-1 {
+  0% {
+    top: -11rem;
+    -webkit-transform: rotate(0) rotateY(-90deg);
+    transform: rotate(0) rotateY(-90deg);
+    opacity: 1;
+  }
+  100% {
+    top: 40rem;
+    -webkit-transform: rotate(360deg) rotateY(180deg);
+    transform: rotate(360deg) rotateY(180deg);
+    opacity: 1;
+  }
+}
+
+@keyframes animate-1 {
+  0% {
+    top: -11rem;
+    -webkit-transform: rotate(0) rotateY(-90deg);
+    transform: rotate(0) rotateY(-90deg);
+    opacity: 1;
+  }
+  100% {
+    top: 40rem;
+    -webkit-transform: rotate(360deg) rotateY(180deg);
+    transform: rotate(360deg) rotateY(180deg);
+    opacity: 1;
+  }
+}
